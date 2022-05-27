@@ -2,8 +2,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Routes, Route } from 'react-router-dom';
-import './style-home.css'
+import Post from '../Post';
 
+import './style-home.css'
 import Header from './Header';
 import Feed from '../Feed';
 import NewPost from '../Post/New';
@@ -34,6 +35,7 @@ function Home() {
           <Route path="/" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/post/new" element={<NewPost />} />
+          <Route path="/post/:slug" element={<Post />} />
           <Route path="*" element={<h1>404!</h1>} />
         </Routes>
       </main>

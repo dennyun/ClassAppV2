@@ -6,6 +6,7 @@ import { Toolbar } from "@material-ui/core";
 import Account from "./Account";
 import Notifications from "./Notifications";
 import WritePost from "./WritePost";
+import { Link } from "react-router-dom";
 
 //erro boxShadow
 //Styles Home
@@ -31,7 +32,9 @@ function Header() {
     return(
         <AppBar position="fixed" color="inherit" className={classes.appBar}>
             <Toolbar>
+              <Link to={'/'}>
                 <img src="/images/logo.png" alt="logo" className={classes.img}/>
+              </Link>
 
                 <div className={classes.grow}></div>
                 
