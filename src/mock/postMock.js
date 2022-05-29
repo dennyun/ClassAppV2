@@ -62,3 +62,25 @@ mock.onGet('/api/feed').reply(200, {
     },
   ],
 });
+
+mock.onGet('/api/posts/user/dennyun').reply(200, {
+  posts: [
+    {
+      id: 1,
+      title:
+        'CONFIDENCIALIDADE E INTEGRIDADE',
+      slug: 'confidencialidade-integridade',
+      date: moment().subtract(1, 'day').toDate().getTime(),
+      author: {
+        id: 1,
+        name: 'Denilson Silva',
+        avatar: '/images/avatars/avatar.jpg',
+      },
+      tags: ['segurança', 'testes', 'integridade', 'confidencialidade'],
+      image: '/images/posts/post1.png',
+      likes: 10,
+      comments: 30,
+    },
+    
+  ],
+});

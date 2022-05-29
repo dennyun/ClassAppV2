@@ -63,7 +63,19 @@
   width: 100% ;
   position:relative ;
   border-bottom: 2px solid #adadad;
-  margin-bottom: 37px ;
+  margin-bottom: 0px ;
+}
+
+.grow{
+  margin-bottom: 37px;
+}
+
+.error{
+  padding: 0%;
+  margin: 0%;
+  font-size: small;
+  margin-top: 16px;
+  color: red;
 }
 
 .input{
@@ -197,3 +209,4 @@
   color: #adadad;
   margin-top: 16px;
 }
+

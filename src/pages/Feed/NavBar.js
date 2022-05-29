@@ -4,13 +4,16 @@ import { makeStyles } from "@material-ui/styles";
 import { ListItem, ListItemText, Paper } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import { ListSubheader } from "@material-ui/core";
+import { useNavigate } from "react-router";
+import { useSelector } from "react-redux";
 
 // Styles NavBar - Material ui
 const useStyles = makeStyles({
     root: {
         padding: 16,
         width: 275,
-        marginRight: 16
+        marginRight: 16,
+        height: '100%'
     },
     button: {
         width: '100%'
@@ -28,10 +31,17 @@ const tags = [
 // NavBar list tags
 function NavBar() {
     const classes = useStyles();
+    const navigate = useNavigate();
+    const account = useSelector((state) => state.account);
+    const isAuthenticated = !!account.user;
 
     return( 
         <Paper className={classes.root}>
-            <Button variant="outlined" color="secondary" className={classes.root}>Registrar Gratis</Button>
+          {
+            !isAuthenticated && (
+              <Button variant="outlined" color="secondary" className={classes.button} onClick={() => navigate('/register')}>Registrar Gratis</Button>
+            )
+          }
            
             <ListSubheader> {`Tags em alta`} </ListSubheader>
            
