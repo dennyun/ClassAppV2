@@ -11,7 +11,10 @@ import NavBar from "./NavBar";
 // Styles Feed - Material ui
 const useStyles = makeStyles({
     root: {
-        width: '100%'
+        width: '60%',
+    },
+    box:{
+     
     }
 });
 
@@ -32,7 +35,7 @@ function Feed() {
 
     return( 
       <Container maxWidth="lg">
-        <Box display="flex">
+        <Box display="flex" className={classes.box}>
           <Hidden smDown>
             <NavBar />
           </Hidden>

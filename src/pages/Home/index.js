@@ -12,8 +12,7 @@ import Profile from '../Profile';
 
 const useStyles = makeStyles ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
+    
   },
   main: {             
     padding: 24,
