@@ -38,53 +38,54 @@ export const Quiz = () => {
 return (
   <div>
     <div className="quiz-button">
-      <Button variant="contained" color="primary" onClick={handleClickOpenQuiz}> Quiz </Button>
+      <Button variant="contained" color="secondary" onClick={handleClickOpenQuiz}> Quiz </Button>
     </div>
-    
-    <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
-        <DialogTitle className="dialog-title" id="alert-dialog-title">
-            {"Quiz"}
-        </DialogTitle>
-        <DialogContent className="dialog-content">
-                <div className='container-quiz'>
-                  <div className="quiz">
-                      {showScore ? (
-                          <div className="score-section">
-                              Você pontuou {score} de {questions.length}
-                          </div>
-                      ) : (
+    <div className="paperQuiz">
+      <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+          <DialogTitle className="dialog-title" id="alert-dialog-title">
+              {"Quiz"}
+          </DialogTitle>
+          <DialogContent className="dialog-content">
+                  <div className='container-quiz'>
+                    <div className="quiz">
+                        {showScore ? (
+                            <div className="score-section">
+                                Você pontuou {score} de {questions.length}
+                            </div>
+                        ) : (
 
-                      <>
-                          <div className="question-section">
-                              <div className="question-count">
-                                  <span>{currentQuestion + 1}</span>/{questions.length}
-                              </div>
+                        <>
+                            <div className="question-section">
+                                <div className="question-count">
+                                    <span>{currentQuestion + 1}</span>/{questions.length}
+                                </div>
 
-                              <div className="question-text">
-                                  {questions[currentQuestion].questionText}
-                              </div>
-                          </div>
+                                <div className="question-text">
+                                    {questions[currentQuestion].questionText}
+                                </div>
+                            </div>
 
-                          <div className="answer-section">
-                              {questions[currentQuestion].answerOptions.map(
-                              (answerOption, index) => (
-                                  <button className='button-quiz' onClick={() => handleAnswer(answerOption.isCorrect)} key={index}>
-                                  {answerOption.answerText}
-                                  </button>
-                              )
-                              )}
-                          </div>
-                      </>
-                      )}
+                            <div className="answer-section">
+                                {questions[currentQuestion].answerOptions.map(
+                                (answerOption, index) => (
+                                    <button className='button-quiz' onClick={() => handleAnswer(answerOption.isCorrect)} key={index}>
+                                    {answerOption.answerText}
+                                    </button>
+                                )
+                                )}
+                            </div>
+                        </>
+                        )}
+                    </div>
                   </div>
-                </div>
-          </DialogContent>
-      </Dialog>
+            </DialogContent>
+        </Dialog>
+    </div>
   </div>
 );
 }

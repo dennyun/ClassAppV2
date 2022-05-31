@@ -29,7 +29,7 @@ function Form() {
             <div className="paper">
               <Grid className={classes.grid} align='center'>
                   <Avatar className='avatarStyle'><LockOutlined /></Avatar>
-                  <h2 className="login-box">Entrar</h2>
+                  <h2 className="login-box">Criar Conta</h2>
               </Grid>
 
               <Formik

@@ -1,11 +1,11 @@
 import moment from 'moment';
 import mock from '../utils/mock';
 
-mock.onGet('/api/post/confidencialidade-integridade').reply(200, {
+mock.onGet('/api/post/pilares-da-segurança').reply(200, {
   id: 1,
   title:
     'Os pilares da Segurança da Informação: Confidencialidade, Integridade, Disponibilidade ',
-  slug: 'pilates-da-seguranca',
+  slug: 'pilares-da-seguranca',
   date: moment().subtract(1, 'day').toDate().getTime(),
   author: {
     id: 1,
@@ -67,7 +67,8 @@ mock.onGet('/api/post/confidencialidade-integridade').reply(200, {
   image: '/images/posts/post1.png',
   likes: 10,
   comments: 30,
-});
+}
+);
 
 mock.onGet('/api/post/tipos-de-hackers').reply(200, {
   id: 2,
@@ -81,11 +82,63 @@ mock.onGet('/api/post/tipos-de-hackers').reply(200, {
   },
   markdownText: `
 
-  fadsfas
+  ## Quais são os principais tipos de hackers?
+  Embora o termo seja bem abrangente, é possível dividir os hackers em diferentes tipos e categorias.
+
+  ## White Hats
+  Traduzido como “chapéus brancos”, são os profissionais honestos, pesquisadores e operadores do ramo da segurança digital (ou segurança cibernética) que trabalham para descobrir brechas de segurança e melhorar a integridade de programas, sistemas e redes, ajudando a proteger usuários e seus dados. Eles trabalham tanto para empresas privadas quanto para órgãos de governo.
+
+  Kevin Poulsen é um exemplo de White hat: ele ajudou a tornar as comunicações entre jornalistas e suas fontes mais segura e confiável.
+
+  ## Black Hats
+  Ou “chapéus pretos” em português, são o oposto dos White Hats. Também possuem muito conhecimento sobre tecnologia, mas usam malwares (programas, códigos maliciosos) para invadir sistemas, roubar informações ou executar ações independentemente da vontade das vítimas; eles praticam crimes contra pessoas, empresas e até mesmo órgãos de governo, e são muito usados em ações de espionagem industrial ou guerra cibernética entre países.
+
+  Kevin Mitnick invadiu as redes da Pacific Bell e da Digital Equipment Corporation, o que o torna um exemplo de black hat – apesar de, depois de cumprir pena, ter se tornado um White hacker, ajudando a melhorar a segurança dos sistemas.
+
+  ## Red Hats
+  Também chamados de hackativistas, eles realizam ataques por motivações políticas, ideológicas, sociais e/ou religiosas. Eles também expõem informações confidenciais por várias razões (como defender a liberdade de informação, a transparência dos governos diante dos cidadãos, o combate aos abusos econômicos de empresas, dentre outras). Esta é a principal diferença entre eles e outros tipos de hackers, já que suas motivações não são primariamente para ganhos pessoais e financeiros.
+
+  O exemplo mais significativo é o de Julian Assange, com o WikiLeaks (que conta com vários ativistas ao redor do mundo), além de Jude Milhon, que luta pelos direitos das mulheres ao redor do mundo através do grupo Cypherpunks.
+
+  ## Gray Hats
+  São profissionais que usam falhas de segurança em redes, programas ou sistemas e, com isto, tentam exigir das empresas a realização de melhorias e soluções para estes problemas. O que difere os Gray Hats (“chapéus cinza”) dos White Hats é que, diferente destes últimos, eles divulgam estas falhas de segurança para o público em geral.
+
+  Em 2013, Khalil Shreateh, um pesquisador de segurança computacional, hackeou a página do perfil oficial de Mark Zuckerberg no Facebook para, assim, exigir a correção de um bug na rede social que ele havia descoberto, que permitia a terceiros postar conteúdo nas páginas invadidas sem o consentimento das vítimas (depois de tentar alertar o Facebook sobre o perigo e ser ignorado pela equipe da rede social).
+
+  ## Script Kiddies
+  Este grupo inclui criminosos que não se importam com nenhum tipo de ética profissional. A diferença entre estes e os outros tipos de hackers é que os script kiddies não são especialistas nem possuem grandes conhecimentos. Eles preferem seguir métodos que outros hackers criaram e ferramentas desenvolvidas por outras pessoas – são a categoria mais baixa dos hackers. Também são chamados de lammers.
+
+  Apesar do termo, eles podem realizar grandes ataques e causar muitos danos, como um garoto de 15 anos que foi detido no Reino Unido em 2015 por roubar dados da TalkTalk Telecom Group PLC.
+
+  ## Crackers
+  São pessoas que também possuem muito conhecimento em informática e tecnologia, mas que usam este conhecimento para invadir sistemas e obter ganhos pessoais (como os Black Hats).
+
+  Jonathan James, ainda no início dos anos 2000, havia invadido computadores da Defense Threat Reduction Agency (Agência de Defesa de Redução de Ameaças), coletando dados de empregados, senhas e credenciais do sistema – posteriormente, ele foi detido e sentenciado a seis meses de prisão aos 16 anos de idade.
+
+  ## Hackers governamentais
+  Há vários países ao redor do mundo que compreendem a necessidade de se preparar para guerras cibernéticas. Eles treinam e pagam para que hackers possam atuar em nome dos interesses nacionais, especialmente no meio virtual. Seus principais alvos são governos inimigos, além de oposicionistas internos aos governos aos quais eles servem.
+
+  O exemplo mais recente de guerra cibernética foi a invasão contra websites de defesa e das forças armadas da Ucrânia, provavelmente realizada por hackers russos a serviço do governo.
+
+  ## Hackers de corporações
+  São parecidos com os hackers pagos por governos, mas os hackers de corporações (ou corporativos) servem empresas e grupos privados. O principal objetivo deles é o de invadir, roubar e prejudicar sistemas, dispositivos, redes e servidores de empresas concorrentes.
+
+  Em 1997 a Gillette sofreu com espionagem corporativa depois que Steven Louis Davis, um de seus engenheiros, vazou informações confidenciais via e-mail para as principais concorrentes da marca. Ele foi condenado por espionagem industrial e sentenciado a 27 meses de prisão.
+
+  ## Terroristas cibernéticos
+  Também chamados de ciberterroristas, atuam por motivações ideológicas, políticas e religiosas, com o objetivo de disseminar caos e desordem. São responsáveis por prejudicar o fornecimento de serviços, prejudicar a infraestrutura, desabilitar sistemas inteiros e outros recursos de organizações e sistemas inimigos.
+
+  Em 2015, um dos casos mais dramáticos foi o da propaganda terrorista difundida pelo Estado Islâmico, que fazia ameaças, invadia sistemas e recrutava novos adeptos através de meios digitais (inclusive através de contas de WhatsApp).
+
+  ## Whistleblowers
+  São hackers que vazam informações internamente, favorecendo concorrentes ou usando dados roubados para benefícios pessoais. Eles também podem se encaixar como hackers corporativos ou hackers governamentais que, ao invés de atacar alvos de “fora para dentro”, fazem os ataques de maneira interna.
+
+  Em 2019, a gigante de telecomunicações AT&T foi vítima de um ataque interno. Um homem paquistanês subornou vários empregados da empresa e, pelo acesso interno, eles expuseram mais de 2 milhões de telefones celulares, vazando informações confidenciais.
+
 
   `,
   tags: ['segurança', 'hackers', 'black hast', 'white hast'],
-  image: '/images/posts/post1.png',
+  image: '/images/posts/post2.png',
   likes: 10,
   comments: 30,
 });
@@ -94,9 +147,8 @@ mock.onGet('/api/feed').reply(200, {
   posts: [
     {
       id: 1,
-      title:
-        'Os pilares da Segurança da Informação: Confidencialidade, Integridade, Disponibilidade',
-      slug: 'confidencialidade-integridade',
+      title:'Os pilares da Segurança da Informação: Confidencialidade, Integridade, Disponibilidade',
+      slug: 'pilares-da-segurança',
       date: moment().subtract(1, 'day').toDate().getTime(),
       author: {
         id: 1,
@@ -111,7 +163,7 @@ mock.onGet('/api/feed').reply(200, {
     {
       id: 2,
       title: 'Os tipos de hackers',
-      slug: 'tipos de hackers',
+      slug: 'tipos-de-hackers',
       date: moment().subtract(1, 'day').toDate().getTime(),
       author: {
         id: 2,
@@ -130,16 +182,15 @@ mock.onGet('/api/posts/user/dennyun').reply(200, {
   posts: [
     {
       id: 1,
-      title:
-        'CONFIDENCIALIDADE E INTEGRIDADE',
-      slug: 'confidencialidade-integridade',
+      title:'Os pilares da Segurança da Informação: Confidencialidade, Integridade, Disponibilidade',
+      slug: 'pilares-da-seguranca',
       date: moment().subtract(1, 'day').toDate().getTime(),
       author: {
         id: 1,
         name: 'Denilson Silva',
         avatar: '/images/avatars/avatar.jpg',
       },
-      tags: ['segurança', 'testes', 'integridade', 'confidencialidade'],
+      tags: ['segurança', 'pilares', 'integridade', 'confidencialidade'],
       image: '/images/posts/post1.png',
       likes: 10,
       comments: 30,

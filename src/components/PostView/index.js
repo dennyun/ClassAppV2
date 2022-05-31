@@ -15,7 +15,8 @@ import { Quiz } from '../../pages/Quiz';
 const useStyles = makeStyles({
   root:{
     border: '1px solid', 
-    fontFamily: 'roboto'   
+    fontFamily: 'roboto',
+    backgroundColor: '#fff'  
   },
   box:{
     width: '70%',

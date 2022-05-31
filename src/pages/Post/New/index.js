@@ -10,8 +10,8 @@ function NewPost() {
 
     return (
       <PostProvider>
-        <Box display='flex' height='calc(100% - 70px)' overflow='scroll'>
-            <Box width='50%' height='100%' padding={2} borderRight='1px solid #ddd'>
+        <Box display='flex' height='100%' overflow='scroll'>
+            <Box width='50%' height='calc(90vh - 70px)' padding={2} borderRight='1px solid #ddd'>
               <PostEditor/>
             </Box>
 
