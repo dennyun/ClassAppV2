@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Grid } from '@material-ui/core';
+import { Quiz } from '../../pages/Quiz';
 
 const useStyles = makeStyles({
   root:{
@@ -104,6 +105,8 @@ function PostView({ post }) {
                   {post.likes}
                 </Typography>
               </IconButton>
+
+              <Quiz/>
             </Box>
             <Divider />
             <Box mb={8}>

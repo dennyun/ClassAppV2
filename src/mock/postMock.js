@@ -5,7 +5,7 @@ mock.onGet('/api/post/confidencialidade-integridade').reply(200, {
   id: 1,
   title:
     'Os pilares da Segurança da Informação: Confidencialidade, Integridade, Disponibilidade ',
-  slug: 'confidencialidade-integridade',
+  slug: 'pilates-da-seguranca',
   date: moment().subtract(1, 'day').toDate().getTime(),
   author: {
     id: 1,
@@ -69,6 +69,27 @@ mock.onGet('/api/post/confidencialidade-integridade').reply(200, {
   comments: 30,
 });
 
+mock.onGet('/api/post/tipos-de-hackers').reply(200, {
+  id: 2,
+  title:'Os tipos de hackers',
+  slug: 'tipos-de-hackers',
+  date: moment().subtract(1, 'day').toDate().getTime(),
+  author: {
+    id: 2,
+    name: 'Igor Araujo',
+    avatar: '/images/avatars/avatar.jpg',
+  },
+  markdownText: `
+
+  fadsfas
+
+  `,
+  tags: ['segurança', 'hackers', 'black hast', 'white hast'],
+  image: '/images/posts/post1.png',
+  likes: 10,
+  comments: 30,
+});
+
 mock.onGet('/api/feed').reply(200, {
   posts: [
     {
@@ -89,11 +110,11 @@ mock.onGet('/api/feed').reply(200, {
     },
     {
       id: 2,
-      title: 'AUTENTICIDADE E DISPONIBILIDADE',
-      slug: 'autenticidade-disponibilidade',
+      title: 'Os tipos de hackers',
+      slug: 'tipos de hackers',
       date: moment().subtract(1, 'day').toDate().getTime(),
       author: {
-        id: 1,
+        id: 2,
         name: 'Igor Araujo',
         avatar: '/images/avatars/igor.jpg',
       },

@@ -9,6 +9,7 @@ import NewPost from './pages/Post/New';
 import Register from './pages/Register';
 
 import './mock';
+import { Quiz } from './pages/Quiz';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <GuestRoute path="/Register" element={<Register />} />
             <GuestRoute path="/login" element={<Login />} />
             <Route path="//*" element={<Home />} />
+            <Route path="/quiz" element={<Quiz />} />
           </Routes>
         </Auth>
       </BrowserRouter>
